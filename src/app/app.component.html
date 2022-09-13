@@ -1,0 +1,23 @@
+<h1>{{title}}</h1>
+  <button routerLink="/add-employee">Add new employee</button>         <th></th>
+  <th></th>
+  <button (click)="getEmployees()">Show current employees</button>
+
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>WorkLocation</th>
+    <th>mobile</th>
+  </tr>
+  <tr *ngFor="let employee of emp" >
+    <td>{{ employee.name }}</td>
+    <td>{{ employee.worklocation }}</td>
+    <td>{{ employee.mobile }}</td>
+
+    <td>
+    <button (click)="deleteEmployee(employee.id)">Delete</button>
+    <button (click)="updateEmployee(employee)" routerLink="/employeelist">Update</button> 
+    </td>
+  </tr>
+
+<router-outlet></router-outlet>

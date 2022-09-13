@@ -1,0 +1,8 @@
+a {
+    text-decoration:none;
+
+}
+a.active{
+    color:rgb(255, 0, 21);
+    font-weight: bold;
+}
