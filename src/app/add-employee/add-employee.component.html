@@ -1,0 +1,38 @@
+   
+<h4>Add New Employee</h4>
+
+<label>Employee Name:
+    <input type="text" id="username" name="username" #username
+           ng-pattern="example.word" required ng-trim="false">
+</label>
+  <br>
+  <br>
+<label>Employee Location: Dropdown List:
+    <select name="users" ng-model="userSelect" #userselect>
+        <option value="Chennai">Channai</option>
+        <option value="Bengalore">Bengalore</option>
+        <option value="Pune">Pune</option>
+        <option value="Hyderabad">Hyderabad</option>
+    </select>
+</label>
+<br>
+<!-- <br>
+<label for="gender" >Employee Gender:  
+    <select id="gender" ng-model="student.gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+</label> -->
+<br />
+<!-- <label>Employee Email Id:
+    <input type="text" name="input" ng-model="example.text"
+           ng-pattern="example.word" required ng-trim="false">
+</label> -->
+
+<label>Employee Mobile Number:
+    <input type="tel" name="mobile" #mobile>
+</label>
+<br>
+<br>
+<button type="button" (click)="createEmployee(5, username.value, userselect.value, 1111111)"> Submit </button>
+
